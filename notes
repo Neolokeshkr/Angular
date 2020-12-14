@@ -1,0 +1,46 @@
+
+Installing Angular CLI  7.3.9
+node 8.9.4
+npm install -g
+
+Setting up new project
+ng new 'project_Name'
+routing - yes
+SCSS
+
+
+package.json
+angular.json
+node modules
+src->index.html - entry point
+src->app->appComponent.html
+
+To build project
+ng build --prod
+
+in server folder
+-Create a package.json file - by running command npm init
+-Create another file called server.js
+-run the command npm i express --save
+-Run the file node server.js
+
+
+server.js
+	var express = require("expess")
+	var app = express();
+	app.use("/",function(req,res){
+		res.send(__dirname+'/node_modules/ibuilder/dist/ibuilder/indes.html')
+	});
+	app.listen(3000, function(){
+		console.log("App running at port 3000")	;
+	})
+	
+	
+Packing the dist folder
+npm pack .\ibuilder
+
+In package.json add
+files : dist
+
+Installing dist tar
+npm install ..\ibtar
